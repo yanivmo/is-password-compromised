@@ -29,19 +29,10 @@ Specify the password as the command argument:
 ./is-password-compromised -p 123456
 ```
 
-Read the password from stdin:
+Read the password from stdin, concealing the password:
 
 ```sh
-./is-password-compromised
-```
-
-The script reads from stdin all the characters, including `\n`,
-until `^D` is pressed.
-
-Read from stdin, concealing the password:
-
-```sh
-(read -s pass && echo -n $pass | ./is-password-compromised)
+./is-password-compromised -s
 ```
 
 ## Output
